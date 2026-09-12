@@ -1,0 +1,44 @@
+{
+  "skill": "modernize-legacy-site",
+  "version": "1.0",
+  "sourceUrl": "https://uspenskih.tilda.ws/",
+  "projectPath": "/Users/aizat/Documents/Projects/RestoredOldSites/uspenskih-studio-modern",
+  "phase": "PUBLICATION_PREFLIGHT",
+  "messageOpening": "website",
+  "source": {
+    "language": "ru",
+    "businessName": "Студия Успенских",
+    "location": "Казань, ул. Восстания, 16",
+    "mobileStatus": "limited",
+    "mobileEvidence": [
+      "Tilda supplies a mobile burger navigation below 980 px.",
+      "The header booking button has an empty href.",
+      "The map viewport metadata points to Moscow while the actual marker is in Kazan.",
+      "Generic metadata and a free-plan platform footer remain visible."
+    ]
+  },
+  "routes": [
+    { "path": "/", "stage": 1, "status": "implemented" }
+  ],
+  "assets": [
+    { "type": "logo", "status": "missing", "reason": "No standalone source logo asset" },
+    { "type": "photos", "status": "found", "count": 15 },
+    { "type": "booking", "status": "verified", "url": "https://b306733.yclients.com/?api_key=zna3an7p3yq13vqfny0k" }
+  ],
+  "local": {
+    "buildPassed": true,
+    "distPath": "/Users/aizat/Documents/Projects/RestoredOldSites/uspenskih-studio-modern/dist",
+    "previewUrl": "http://127.0.0.1:54932/uspenskih-studio-modern/",
+    "qa": {
+      "viewports": ["390x844", "768x1024", "1440x900"],
+      "passes": 2,
+      "overflow": false,
+      "brokenImages": false,
+      "mobileMenu": true,
+      "anchors": true,
+      "externalBooking": true,
+      "nonRootBase": "/uspenskih-studio-modern/"
+    }
+  },
+  "publication": { "approved": true }
+}
