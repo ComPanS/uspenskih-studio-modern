@@ -17,6 +17,7 @@ export function SiteLayout() {
     <div className="site-shell">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Студия Успенских, к началу страницы">
+          <img className="brand-logo" src={`${import.meta.env.BASE_URL}images/logo.jpg`} alt="Логотип Студии Успенских" />
           <span className="brand-name">Студия Успенских</span>
         </a>
         <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Основная навигация">

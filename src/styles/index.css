@@ -43,8 +43,9 @@ img { display: block; max-width: 100%; }
   z-index: 50;
 }
 
-.brand { display: inline-flex; align-items: center; width: fit-content; }
-.brand-name { font-size: 0.98rem; font-weight: 800; text-transform: uppercase; }
+.brand { align-items: center; display: inline-flex; gap: 12px; width: fit-content; }
+.brand-logo { background: var(--white); height: 54px; object-fit: contain; width: 54px; }
+.brand-name { font-size: .76rem; font-weight: 800; line-height: 1.15; max-width: 10ch; text-transform: uppercase; }
 .main-nav { display: flex; justify-content: center; gap: 30px; }
 .main-nav a { color: rgba(255,255,255,.75); font-size: .84rem; font-weight: 700; text-transform: uppercase; }
 .main-nav a:hover { color: var(--white); }
@@ -157,7 +158,7 @@ img { display: block; max-width: 100%; }
 
 .team-section { display: grid; grid-template-columns: 43% 57%; min-height: 900px; }
 .team-visual { height: 100%; min-height: 760px; overflow: hidden; position: relative; }
-.team-visual img { height: 100%; object-fit: cover; object-position: 52% center; width: 100%; }
+.team-visual img { height: 100%; inset: 0; object-fit: cover; object-position: 52% center; position: absolute; width: 100%; }
 .team-visual span { background: var(--green); bottom: 0; color: var(--ink); font: 800 1.8rem/1 "Arial Narrow", Arial, sans-serif; padding: 18px 22px; position: absolute; right: 0; text-transform: uppercase; }
 .team-content { padding: 100px max(48px, calc((100vw - 1280px) / 2)) 90px 8%; }
 .team-heading { margin: 0; width: auto; }
@@ -243,7 +244,9 @@ img { display: block; max-width: 100%; }
   :root { --content: calc(100% - 32px); }
   html { scroll-padding-top: 64px; }
   .site-header { height: 64px; }
-  .brand-name { font-size: .76rem; max-width: 12ch; }
+  .brand { gap: 0; }
+  .brand-logo { height: 42px; width: 42px; }
+  .brand-name { height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; clip: rect(0 0 0 0); white-space: nowrap; }
   .header-booking { height: 36px; padding: 0 12px; font-size: .68rem; }
   .main-nav { top: 64px; }
   .hero { height: 76svh; min-height: 580px; }
@@ -265,7 +268,7 @@ img { display: block; max-width: 100%; }
   .section-heading h2, .process-intro h2, .contact-copy h2 { font-size: 3.25rem; }
   .services-heading p:last-child { margin-top: 24px; }
   .service-catalogue { display: block; margin-top: 46px; width: 100%; }
-  .service-tabs { background: var(--paper); flex-direction: row; overflow-x: auto; padding-left: 16px; position: sticky; top: 64px; z-index: 5; }
+  .service-tabs { background: var(--paper); flex-direction: row; overflow-x: auto; padding-left: 0; position: sticky; top: 64px; z-index: 5; }
   .service-tab { flex: 0 0 54%; gap: 6px 10px; grid-template-columns: 28px 1fr; min-height: 102px; padding: 17px 14px; }
   .service-tab strong { font-size: 1.18rem; }
   .service-tab small { font-size: .68rem; }
@@ -287,7 +290,7 @@ img { display: block; max-width: 100%; }
   .team-list { margin-top: 42px; }
   .team-member { gap: 10px 12px; grid-template-columns: 22px 1fr; padding: 19px 0; }
   .team-member > p { font-size: .86rem; }
-  .team-visual { min-height: 520px; order: 2; }
+  .team-visual { flex: none; height: 520px; min-height: 0; order: 2; }
   .team-visual img { object-position: 57% center; }
   .gallery-section { display: grid; grid-template-columns: 44% 56%; grid-template-rows: 210px 360px; min-height: 570px; }
   .gallery-main { grid-column: 1 / 3; grid-row: 2; }
@@ -302,6 +305,18 @@ img { display: block; max-width: 100%; }
   .site-footer { align-items: flex-start; gap: 26px; grid-template-columns: 1fr; padding: 42px 16px; }
   .site-footer p { margin: 0; }
   .footer-links { align-items: flex-start; }
+}
+
+@media (max-width: 360px) {
+  .hero h1 { font-size: 3.35rem; }
+  .contact-copy h2 { font-size: 3rem; }
+  .process-intro h2 { font-size: 3rem; }
+  .gallery-section { grid-template-rows: 150px 330px 190px; min-height: 670px; }
+  .gallery-statement { grid-column: 1 / 3; grid-row: 1; }
+  .gallery-statement strong { font-size: 1.8rem; }
+  .gallery-main { grid-column: 1 / 3; grid-row: 2; }
+  .gallery-detail { grid-column: 1 / 3; grid-row: 3; }
+  .gallery-detail img { object-position: center 34%; }
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -21,7 +21,7 @@
     { "path": "/", "stage": 1, "status": "implemented" }
   ],
   "assets": [
-    { "type": "logo", "status": "missing", "reason": "No standalone source logo asset" },
+    { "type": "logo", "status": "found", "url": "https://avatars.mds.yandex.net/get-altay/19541413/2a0000019d480e12bd5eabc5ab4f2afbfd9f/S", "localPath": "public/images/logo.jpg", "usage": "header" },
     { "type": "photos", "status": "found", "count": 15 },
     { "type": "booking", "status": "verified", "url": "https://b306733.yclients.com/?api_key=zna3an7p3yq13vqfny0k" }
   ],
